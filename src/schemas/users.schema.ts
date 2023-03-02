@@ -1,9 +1,12 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import * as mongoose from 'mongoose';
+import { Document } from 'mongoose';
 import { Todo } from './todos.schema';
 
+// export type UserDocument = mongoose.HydratedDocument<User>;
+
 @Schema()
-export class User {
+export class User extends Document {
   @Prop({ required: true, unique: true, lowercase: true, trim: true })
   email: string;
 
