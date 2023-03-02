@@ -6,4 +6,7 @@ export class CreateTodoDto {
 
   @IsString()
   status: string;
+
+  @IsString()
+  user: string;
 }

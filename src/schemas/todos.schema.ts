@@ -15,7 +15,7 @@ export class Todo extends Document {
   status: string;
 
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'User' })
-  user: User;
+  user: mongoose.Schema.Types.ObjectId;
 }
 
 export const TodoSchema = SchemaFactory.createForClass(Todo);
